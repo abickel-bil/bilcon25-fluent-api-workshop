@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("");
-Console.WriteLine("************** Step 1 Outcome **************");
-Console.WriteLine("Open './Outcomes/step-1-requirements-analysis.md' for more information.");
-Console.WriteLine("To continue to the next step, run 'git checkout step-2-api-design && dotnet run'");
-    
+Console.WriteLine("************** Overview **************");
+Console.WriteLine("Welcome to the overview");
+Console.WriteLine("Open ./Docs/overview.readme.md for more information.");
+Console.WriteLine("When you're ready to continue, run 'git checkout step-1' followed by 'dotnet run' to continue");
