@@ -20,7 +20,6 @@ Today, we're connecting to the totally-real, definitely-not-fictisious Possum DB
   - url must include a fully-qualified domain name, and must not specifiy connection protocol.
   - username must not be empty.
   - password must not be empty.
-<<<<<<< HEAD
 - All inputs (excluding password) must have the option to use a default value
 
 ## Objectives
@@ -29,38 +28,6 @@ Today, we're connecting to the totally-real, definitely-not-fictisious Possum DB
 - Design API Flows based on configuration needs and technical requirements
 - Implement API design
 
-## Objectives
-
-- Identify technical requiremnts based on the given problem statement and known constraints
-- Design API Flows based on configuration needs and technical requirements
-- Implement API design
-
 ### First Steps
 
 Before we dive into creating our API design, let's take a moment to ensure we understand both the constraints and their impact on our solution.
-
----
-
-- `git checkout step-1-requirements-analysis` to continue.
-=======
-- All inputs must have the option to use a default value
-- We need to restrict access to database connections
-
-## Objectives
-
-- Identify technical requiremnts based on the given problem statement and known constraints
-- Design API Flows based on configuration needs and technical requirements
-- Implement API design
-
-### First Steps
-
-Before we dive into creating our API design, let's take a moment to ensure we understand both the constraints and their impact on our solution.
-
----
-
-<<<<<<< HEAD
-- `git checkout step-1` to continue.
->>>>>>> 11a7f15 (defines the project overview)
-=======
-- `git checkout step-1-requirements-analysis` to continue.
->>>>>>> 983b04f (adds workshop objectives to overview step)
