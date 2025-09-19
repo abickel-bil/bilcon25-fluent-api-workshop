@@ -16,7 +16,11 @@ What we'll cover:
 
 ## Running the project
 
-- in the root folder of this repository,  `dotnet run` in command terminal or git bash will execute the console application
+On any branch or step, use the following terminal command to display specific instructions for that step
+
+Note: _command must be run from the root folder of the repository_
+
+- `dotnet run`
 
 ## Getting started
 
