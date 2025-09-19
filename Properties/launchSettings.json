@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Bilcon25-fluent-api-workshop": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
