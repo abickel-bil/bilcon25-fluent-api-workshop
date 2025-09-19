@@ -28,12 +28,6 @@ Today, we're connecting to the totally-real, definitely-not-fictisious Possum DB
 - Design API Flows based on configuration needs and technical requirements
 - Implement API design
 
-## Objectives
-
-- Identify technical requiremnts based on the given problem statement and known constraints
-- Design API Flows based on configuration needs and technical requirements
-- Implement API design
-
 ### First Steps
 
 Before we dive into creating our API design, let's take a moment to ensure we understand both the constraints and their impact on our solution.
