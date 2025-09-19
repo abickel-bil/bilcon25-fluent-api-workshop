@@ -20,8 +20,7 @@ Today, we're connecting to the totally-real, definitely-not-fictisious Possum DB
   - url must include a fully-qualified domain name, and must not specifiy connection protocol.
   - username must not be empty.
   - password must not be empty.
-- All inputs must have the option to use a default value
-- We need to restrict access to database connections
+- All inputs (excluding password) must have the option to use a default value
 
 ## Objectives
 
