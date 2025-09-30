@@ -34,3 +34,8 @@ When implementing a phase that allows a user to invoke the same phase method mul
 ### Action Item 2
 
 Using your native-language description (if you've completed action item #1) or the [functional requirements](../Outcomes/step-1-requirements-analysis.md) document, model the interfaces that you'll use to build your fluent API.
+
+## Next Steps
+
+- To view the solution to this step, `git checkout step-2-api-design-outcome`
+- To continue to the next step, `git checkout step-3-implementation`
