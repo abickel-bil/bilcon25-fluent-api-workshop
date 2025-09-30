@@ -21,44 +21,16 @@ Take a minute to write out the entire API flow, using natural language. No need 
 
 With our natural-language outline in place, now we can begin to identify how our users will step through our API.  
 
-Typically, each action (or group of options for a given action) represents a single 'phase' of the api.  For example, a natural language flow that captures the domain name first, then user name would have two phases.   Once the user selects an option that satisfies the data collection requirements for that phase, they can move onto the next phase.
+Typically, each action (or group of options for a given action) represents a single 'phase' of the api.  When reviewing your natural language description, look for qualifiers such as `default`, `or`, `with`, `without`. These tend to describe available options within a phase.  Conditional statements like `if`, `when`, `else`, as well as the conjunection `and` tend to signal transition between phases.
 
-```csharp
-interface IPhaseOne 
-{
-    public IPhaseTwo WithDomainName(string domain);
-    public IPhaseTwo WithDefaultDomainName();
-}
+The following example illustrates how we can use interfaces and return types to control transition between phases.
 
-interface IPhaseTwo
-{
-    public IPHaseThree WithUserName(string userName);
-    public IPHaseThree WithDefaultUserName();
-}
-```
+![an image of an interface model](./assets/step-2-readme-example-interface-model-1.png "An example interface model")
 
 ### Common Gotchas
 
-When implementing a phase that allows a user to invoke the same phase method multiple times, always provide a method that clearly progresses the user to the next phase.
+When implementing a phase that allows a user to invoke the same phase method multiple times, always provide a method that explicitly transitions to the next phase.
 
-```csharp
+### Action Item 2
 
-interface IApiPhaseTwo
-{
-    // user can call this method as many times as they'd like - how will we know when they're done adding values?
-    public IApiPhaseTwo WithAdditionalValue(object value);
-
-    // this method is the clearly defined 'exit condition' of API phase 2
-    public IApiPhaseThree WithNoAdditionalValues();
-}
-
-// Program.cs
-...
-
-var phaseThree = builder
-    .WithAdditionalValue(1)
-    .WithAdditionalValue(2)
-    ...
-    .WithNoAdditionalValues()
-
-```
+Using your native-language description (if you've completed action item #1) or the [functional requirements](../Outcomes/step-1-requirements-analysis.md) document, model the interfaces that you'll use to build your fluent API.
