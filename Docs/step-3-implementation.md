@@ -4,7 +4,7 @@ We'll follow a simple aggregation strategy for this API implementation, since we
 
 Please note that there are several approaches to implementing fluent APIs; this workshop will focus on a simple implementation that focuses on two fundamental benefits of the Builder Pattern: `idempotency`and `object guarantees`.
 
-## Go to tasks
+## Skip to the fun bits
 
 If you want to stop reading and start building, open [Step 3: Action Item 1](./step-3-action-item-1.md).
 
@@ -41,3 +41,8 @@ var goodDomain = new Builder()
 var guaranteed = goodDomain
     .WithDefaultUserName();
 ```
+
+## Next Steps
+
+- To skip to the outcome for this step, `git checkout step-3-implementation-outcome && dotnet run`.
+- To continue to the summary, `git checkout summary && dotnet run`.

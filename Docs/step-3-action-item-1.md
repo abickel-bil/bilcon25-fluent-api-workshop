@@ -16,3 +16,8 @@ In the interest of brevity:
 2. Ensure the `ApiBuilder` class implements all required interfaces
 3. Implement all required methods to capture input values
 4. Implement all required validation to enforce `Object Guarantee` throughout the API.
+
+## Next Steps
+
+- To skip to the outcome for this step, `git checkout step-3-implementation-outcome && dotnet run`.
+- To continue to the summary, `git checkout summary && dotnet run`.
