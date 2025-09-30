@@ -18,6 +18,18 @@ Here is one example of how we can model our intefaces using the natural-language
 
 ![an illustration of fluent API interface model](./assets/step-2-outcome-example-interface-model-1.png)
 
+## Example Usage
+
+```csharp
+var builder = new Builder();
+
+var connString = builder
+    .WithDomainName("my-domain.io")
+    .WithUserName("bobby_droptables")
+    .WithPassword("Super-Tough-2-Guess-Phrase#")
+    .WithPort(5555);
+```
+
 ## Next Steps
 
 - To continue to the next step, `git checkout step-3-implementation`
