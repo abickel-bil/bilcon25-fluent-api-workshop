@@ -1,7 +1,7 @@
 public class ApiBuilder : IConnectionStringBuilder, IConnectionUser, IConnectionPassword, IConnectionPort
 {
     public static int MinPortNumber => 1000;
-    
+
     /// <summary>
     /// The domain name to use for the connection string
     /// </summary>
@@ -63,6 +63,8 @@ public class ApiBuilder : IConnectionStringBuilder, IConnectionUser, IConnection
     public IConnectionUser WithDomainName(string domainName)
     {
         AssertNotEmpty(domainName);
+
+        AssertNoProtocol(domainName);
 
         _domainName = domainName;
 
@@ -131,6 +133,15 @@ public class ApiBuilder : IConnectionStringBuilder, IConnectionUser, IConnection
         if (actual < floor)
         {
             throw new ArgumentException($"input must be minimum value {floor}");
+        }
+    }
+
+    private void AssertNoProtocol(string input)
+    {
+
+        if (input.Contains("http"))
+        {
+            throw new ArgumentException("connection string must not specify protocol");
         }
     }
 }
