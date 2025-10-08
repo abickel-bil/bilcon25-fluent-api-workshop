@@ -2,7 +2,7 @@
 
 We'll follow a simple aggregation strategy for this API implementation, since we're just collecting a handful of configuration values to generate a single output.  
 
-Please note that there are several approaches to implementing fluent APIs; this workshop will focus on a simple implementation that focuses on two fundamental benefits of the Builder Pattern: `idempotency`and `object guarantees`.
+Please note that there are several approaches to implementing fluent APIs; Today we'll use a simple stepped, or 'phased', approach that focuses on two fundamental benefits of the Builder Pattern: `idempotency`and `object guarantees`.  
 
 ## Skip to the fun bits
 
@@ -24,7 +24,7 @@ var readonlyUser = domainBuilder.WithDefaultUserName();
 
 ## Object Guarantees
 
-The fundamental benefit of object guarantees is that at any point, if our API returns an object, it is guaranteed to be in a consistent and healthy state.  Long story short, any attempt to call our API with invalid or missing inputs will result in a runtime exception being thrown.  Our users don't have to worry about whether they're working with null references or malformed objects at any phase of the API.
+The fundamental benefit of object guarantees is that at any point, if our API returns an object, it is guaranteed to be in a consistent and healthy state.  Long story short, any attempt to call our API with invalid or missing inputs will result in a runtime exception being thrown.  Our users don't have to worry about whether they're working with null references or malformed objects when using our connection string builder.
 
 ```csharp
 var domainName = null;
@@ -32,6 +32,8 @@ var domainName = null;
 // We can't guarantee that users will always provide validated inputs.
 var badDomain = new Builder()
     .WithDomainName(domainName!);    // we CAN guarantee that this method throws when input is null
+
+...
       
 var goodDomain = new Builder()
     .WithDomainName("my-domain.io");
